@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    /* "node_modules": true,
+    ".gitignore": true,
+    "package-lock.json": true,
+    "README.md": true,
+    "tsconfig.json": true,
+    "eslint.config.mjs": true,
+    "package.json": true,
+    ".prettierrc": true */
+  }
+}
