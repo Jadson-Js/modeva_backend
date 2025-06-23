@@ -5,16 +5,11 @@ projeto-api/
 │ ├── domain/
 │ │ ├── entities/
 │ │ │ ├── User.ts
-│ │ │ ├── Token.ts
-│ │ │ └── index.ts
 │ │ ├── repositories/
 │ │ │ ├── IUserRepository.ts
-│ │ │ ├── ITokenRepository.ts
-│ │ │ └── index.ts
 │ │ ├── services/
 │ │ │ ├── IEmailService.ts
 │ │ │ ├── ICacheService.ts
-│ │ │ └── index.ts
 │ │ └── errors/
 │ │ ├── AppError.ts
 │ │ ├── ValidationError.ts
@@ -29,7 +24,6 @@ projeto-api/
 │ │ │ └── auth/
 │ │ │ ├── LoginUseCase.ts
 │ │ │ ├── RegisterUseCase.ts
-│ │ │ └── RefreshTokenUseCase.ts
 │ │ ├── dtos/
 │ │ │ ├── CreateUserDTO.ts
 │ │ │ ├── UpdateUserDTO.ts
@@ -48,7 +42,6 @@ projeto-api/
 │ │ │ │ │ └── TokenModel.ts
 │ │ │ │ └── repositories/
 │ │ │ │ ├── UserRepository.ts
-│ │ │ │ └── TokenRepository.ts
 │ │ │ └── redis/
 │ │ │ ├── connection.ts
 │ │ │ └── CacheService.ts
@@ -66,7 +59,6 @@ projeto-api/
 │ │ ├── controllers/
 │ │ │ ├── UserController.ts
 │ │ │ ├── AuthController.ts
-│ │ │ └── HealthController.ts
 │ │ ├── middlewares/
 │ │ │ ├── auth.middleware.ts
 │ │ │ ├── validation.middleware.ts
@@ -77,7 +69,6 @@ projeto-api/
 │ │ │ ├── v1/
 │ │ │ │ ├── userRoutes.ts
 │ │ │ │ ├── authRoutes.ts
-│ │ │ │ ├── healthRoutes.ts
 │ │ │ │ └── index.ts
 │ │ │ └── index.ts
 │ │ └── swagger/
@@ -94,14 +85,12 @@ projeto-api/
 │ │ ├── constants/
 │ │ │ ├── httpStatus.ts
 │ │ │ ├── errorMessages.ts
-│ │ │ └── regex.ts
 │ │ ├── utils/
 │ │ │ ├── logger.ts
 │ │ │ ├── asyncHandler.ts
 │ │ │ ├── dateUtils.ts
 │ │ │ └── responseUtils.ts
 │ │ ├── types/
-│ │ │ ├── common.types.ts
 │ │ │ ├── auth.types.ts
 │ │ │ └── api.types.ts
 │ │ └── container/
@@ -150,24 +139,7 @@ projeto-api/
 │ │ ├── clean-architecture.md
 │ │ └── database-design.md
 │ └── deployment/
-│ ├── docker-setup.md
 │ └── environment-variables.md
-├── scripts/
-│ ├── build.sh
-│ ├── deploy.sh
-│ ├── seed-database.ts
-│ ├── migrate.ts
-│ └── health-check.sh
-├── docker/
-│ ├── Dockerfile
-│ ├── Dockerfile.dev
-│ ├── docker-compose.yml
-│ ├── docker-compose.dev.yml
-│ └── nginx.conf
-├── .github/
-│ └── workflows/
-│ ├── ci.yml
-│ └── cd.yml
 ├── environments/
 │ ├── .env.example
 │ ├── .env.development

@@ -6,4 +6,6 @@ const userRoutes = Router();
 
 userRoutes.get('/', asyncHandler(UserController.findAll));
 
+userRoutes.post('/', asyncHandler(UserController.create));
+
 export { userRoutes };

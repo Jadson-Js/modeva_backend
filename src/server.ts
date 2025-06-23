@@ -6,13 +6,11 @@ const PORT = 3000;
 async function startServer() {
   try {
     await connectToDatabase();
-
     app.listen(PORT, () => {
-      console.log(`🔥 Servidor rodando em http://localhost:${PORT}`);
+      console.log(`🔥 Server running at http://localhost:${PORT}`);
     });
   } catch (error) {
-    console.log('❌ Erro ao iniciar o servidor');
-    console.log(error);
+    console.error('❌ Server failed to start', error);
     process.exit(1);
   }
 }

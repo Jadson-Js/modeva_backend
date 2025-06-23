@@ -3,7 +3,7 @@ export class User {
     readonly id: string,
     readonly email: string,
     readonly password: string,
-    readonly createdAt: string,
-    readonly updatedAt: string
+    readonly createdAt: Date,
+    readonly updatedAt: Date
   ) {}
 }

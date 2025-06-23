@@ -1,5 +1,7 @@
+import { IUserInput } from '../../application/dtos/user/IUser';
 import { User } from '../entities/User';
 
 export interface IUserRepository {
-  findAll(): Promise<User[]>;
+  findAll(): Promise<User[] | null>;
+  create(params: IUserInput): Promise<User>;
 }
