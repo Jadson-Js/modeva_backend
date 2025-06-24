@@ -1,32 +1,32 @@
 import { IUserInput } from '../../../../application/dtos/user/IUser';
 import { User } from '../../../../domain/entities/User';
 import { IUserRepository } from '../../../../domain/repositories/IUserRepository';
-import { IUserDocument, UserModel } from '../models/UserModel';
-
-function toEntity(doc: IUserDocument): User {
-  return new User(
-    doc.id,
-    doc.email,
-    doc.password,
-    doc.createdAt,
-    doc.updatedAt
-  );
-}
+import { UserModel } from '../models/UserModel';
 
 export class UserRepository implements IUserRepository {
   async findAll(): Promise<User[]> {
-    const docs = await UserModel.find();
-    return docs.map(toEntity);
+    const usersDoc = await UserModel.find();
+    return usersDoc.map(
+      (userDoc) =>
+        new User(
+          userDoc.id,
+          userDoc.email,
+          userDoc.password,
+          userDoc.createdAt,
+          userDoc.updatedAt
+        )
+    );
   }
 
   async create(params: IUserInput): Promise<User> {
-    //const docs = await UserModel.create(params);
-    return {
-      id: '1',
-      email: params.email,
-      password: params.password,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
+    const userDoc = await UserModel.create(params);
+
+    return new User(
+      userDoc.id,
+      userDoc.email,
+      userDoc.password,
+      userDoc.createdAt,
+      userDoc.updatedAt
+    );
   }
 }

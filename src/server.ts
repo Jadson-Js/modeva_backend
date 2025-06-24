@@ -6,6 +6,7 @@ const PORT = 3000;
 async function startServer() {
   try {
     await connectToDatabase();
+
     app.listen(PORT, () => {
       console.log(`🔥 Server running at http://localhost:${PORT}`);
     });
