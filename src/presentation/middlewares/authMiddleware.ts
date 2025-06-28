@@ -1,4 +1,4 @@
-import { UnauthorizedError } from '../../domain/errors/UnauthorizedError';
+import { UnauthorizedError } from '../../shared/errors/UnauthorizedError';
 import { Request, Response, NextFunction } from 'express';
 
 export function authMiddleware(

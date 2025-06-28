@@ -1,4 +1,4 @@
-import { CreateUserInput } from '../../../../application/dtos/user/CreateUserDTO';
+import { CreateUserInput } from '../../../../presentation/dtos/user/CreateUserDTO';
 import { User } from '../../../../domain/entities/User';
 import { IUserRepository } from '../../../../domain/repositories/IUserRepository';
 import { UserModel } from '../models/UserModel';

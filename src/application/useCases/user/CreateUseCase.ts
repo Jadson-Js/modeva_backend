@@ -1,6 +1,6 @@
 import { UserRepository } from '../../../infra/database/mongoose/repositories/UserRepository';
 import { User } from '../../../domain/entities/User';
-import { CreateUserInput } from '../../dtos/user/CreateUserDTO';
+import { CreateUserInput } from '../../../presentation/dtos/user/CreateUserDTO';
 
 export class CreateUseCase {
   constructor(private readonly userRepository: UserRepository) {}

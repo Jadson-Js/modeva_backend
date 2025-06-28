@@ -1,10 +1,7 @@
 import { Request, Response } from 'express';
-import {
-  findAllUsersUseCase,
-  createUserUseCase,
-} from '../../shared/factories/user';
+import { findAllUsersUseCase, createUserUseCase } from '../factories/user';
 import { UserMapper } from '../mappers/UserMapper';
-import { ApiResponse } from '../../application/dtos/IApiResponse';
+import { ApiResponse } from '../dtos/IApiResponse';
 
 export class UserController {
   static async findAll(req: Request, res: Response): Promise<Response> {
