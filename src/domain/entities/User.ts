@@ -3,6 +3,7 @@ export class User {
     readonly id: string,
     readonly email: string,
     readonly password: string,
+    readonly active: boolean,
     readonly createdAt: Date,
     readonly updatedAt: Date
   ) {}

@@ -20,6 +20,10 @@ const UserSchema = new Schema<IUserModel>(
       required: [true, 'Password is required'],
       minlength: [6, 'The password must be at least 6 characters long'],
     },
+    active: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,

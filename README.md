@@ -1,31 +1,31 @@
 Objetivo:
 
 projeto-api/
-├── src/
-│ ├── domain/
-│ │ ├── entities/
-│ │ │ ├── User.ts
-│ │ ├── repositories/
-│ │ │ ├── IUserRepository.ts
+├── src/ (COMPLETE)
+│ ├── domain/ (COMPLETE)
+│ │ ├── entities/ (COMPLETE)
+│ │ │ ├── User.ts (COMPLETE)
+│ │ ├── repositories/ (COMPLETE)
+│ │ │ ├── IUserRepository.ts (COMPLETE)
 │ │ ├── services/
 │ │ │ ├── IEmailService.ts
 │ │ │ ├── ICacheService.ts
-│ │ └── errors/
-│ │ ├── AppError.ts
+│ │ └── errors/ (COMPLETE)
+│ │ ├── AppError.ts (COMPLETE)
 │ │ ├── ValidationError.ts
-│ │ └── NotFoundError.ts
-│ ├── application/
-│ │ ├── useCases/
-│ │ │ ├── user/
-│ │ │ │ ├── CreateUserUseCase.ts
-│ │ │ │ ├── GetUserUseCase.ts
+│ │ └── NotFoundError.ts (COMPLETE)
+│ ├── application/ (COMPLETE)
+│ │ ├── useCases/ (COMPLETE)
+│ │ │ ├── user/ (COMPLETE)
+│ │ │ │ ├── CreateUserUseCase.ts (COMPLETE)
+│ │ │ │ ├── GetUserUseCase.ts (COMPLETE)
 │ │ │ │ ├── UpdateUserUseCase.ts
 │ │ │ │ └── DeleteUserUseCase.ts
 │ │ │ └── auth/
 │ │ │ ├── LoginUseCase.ts
 │ │ │ ├── RegisterUseCase.ts
-│ │ ├── dtos/
-│ │ │ ├── CreateUserDTO.ts
+│ │ ├── dtos/ (COMPLETE)
+│ │ │ ├── CreateUserDTO.ts (COMPLETE)
 │ │ │ ├── UpdateUserDTO.ts
 │ │ │ ├── LoginDTO.ts
 │ │ │ └── ApiResponseDTO.ts
@@ -33,15 +33,15 @@ projeto-api/
 │ │ ├── UserValidator.ts
 │ │ ├── AuthValidator.ts
 │ │ └── CommonValidator.ts
-│ ├── infrastructure/
-│ │ ├── database/
-│ │ │ ├── mongoose/
-│ │ │ │ ├── connection.ts
-│ │ │ │ ├── models/
-│ │ │ │ │ ├── UserModel.ts
+│ ├── infrastructure/ (COMPLETE)
+│ │ ├── database/ (COMPLETE)
+│ │ │ ├── mongoose/ (COMPLETE)
+│ │ │ │ ├── connection.ts (COMPLETE)
+│ │ │ │ ├── models/ (COMPLETE)
+│ │ │ │ │ ├── UserModel.ts (COMPLETE)
 │ │ │ │ │ └── TokenModel.ts
-│ │ │ │ └── repositories/
-│ │ │ │ ├── UserRepository.ts
+│ │ │ │ └── repositories/ (COMPLETE)
+│ │ │ │ ├── UserRepository.ts (COMPLETE)
 │ │ │ └── redis/
 │ │ │ ├── connection.ts
 │ │ │ └── CacheService.ts
@@ -55,48 +55,48 @@ projeto-api/
 │ │ │ └── SendGridEmailProvider.ts
 │ │ └── aws/
 │ │ └── S3StorageProvider.ts
-│ ├── presentation/
-│ │ ├── controllers/
-│ │ │ ├── UserController.ts
+│ ├── presentation/ (COMPLETE)
+│ │ ├── controllers/ (COMPLETE)
+│ │ │ ├── UserController.ts (COMPLETE)
 │ │ │ ├── AuthController.ts
-│ │ ├── middlewares/
-│ │ │ ├── auth.middleware.ts
+│ │ ├── middlewares/ (COMPLETE)
+│ │ │ ├── auth.middleware.ts (COMPLETE)
 │ │ │ ├── validation.middleware.ts
-│ │ │ ├── error.middleware.ts
-│ │ │ ├── rateLimit.middleware.ts
+│ │ │ ├── error.middleware.ts (COMPLETE)
+│ │ │ ├── rateLimit.middleware.ts  
 │ │ │ └── cors.middleware.ts
-│ │ ├── routes/
+│ │ ├── routes/ (COMPLETE)
 │ │ │ ├── v1/
-│ │ │ │ ├── userRoutes.ts
+│ │ │ │ ├── userRoutes.ts (COMPLETE)
 │ │ │ │ ├── authRoutes.ts
 │ │ │ │ └── index.ts
-│ │ │ └── index.ts
+│ │ │ └── index.ts (COMPLETE)
 │ │ └── swagger/
 │ │ ├── swagger.config.ts
 │ │ └── schemas/
 │ │ ├── User.schema.ts
 │ │ └── Auth.schema.ts
-│ ├── shared/
-│ │ ├── config/
+│ ├── shared/ (COMPLETE)
+│ │ ├── config/ (COMPLETE)
 │ │ │ ├── env.config.ts
-│ │ │ ├── database.config.ts
+│ │ │ ├── database.config.ts (COMPLETE)
 │ │ │ ├── cache.config.ts
 │ │ │ └── app.config.ts
 │ │ ├── constants/
 │ │ │ ├── httpStatus.ts
 │ │ │ ├── errorMessages.ts
-│ │ ├── utils/
+│ │ ├── utils/ (COMPLETE)
 │ │ │ ├── logger.ts
-│ │ │ ├── asyncHandler.ts
+│ │ │ ├── asyncHandler.ts (COMPLETE)
 │ │ │ ├── dateUtils.ts
 │ │ │ └── responseUtils.ts
 │ │ ├── types/
 │ │ │ ├── auth.types.ts
 │ │ │ └── api.types.ts
-│ │ └── container/
-│ │ └── dependencyInjection.ts
-│ ├── app.ts
-│ └── server.ts
+│ │ └── container/ (COMPLETE)
+│ │ └── dependencyInjection.ts (COMPLETE)
+│ ├── app.ts (COMPLETE)
+│ └── server.ts (COMPLETE)
 ├── tests/
 │ ├── unit/
 │ │ ├── useCases/

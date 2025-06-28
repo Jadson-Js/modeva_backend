@@ -1,11 +1,12 @@
 import { User } from '../../domain/entities/User';
-import { IUserOutput } from '../../application/dtos/user/IUser';
+import { CreateUserOutput } from '../../application/dtos/user/CreateUserDTO';
 
 export class UserMapper {
-  static toDTO(user: User): IUserOutput {
+  static toDTO(user: User): CreateUserOutput {
     return {
       id: user.id,
       email: user.email,
+      active: user.active,
       createdAt: user.createdAt,
       updatedAt: user.updatedAt,
     };

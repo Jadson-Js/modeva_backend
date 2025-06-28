@@ -1,4 +1,4 @@
-import { IUserInput } from '../../../../application/dtos/user/IUser';
+import { CreateUserInput } from '../../../../application/dtos/user/CreateUserDTO';
 import { User } from '../../../../domain/entities/User';
 import { IUserRepository } from '../../../../domain/repositories/IUserRepository';
 import { UserModel } from '../models/UserModel';
@@ -12,19 +12,21 @@ export class UserRepository implements IUserRepository {
           userDoc.id,
           userDoc.email,
           userDoc.password,
+          userDoc.active,
           userDoc.createdAt,
           userDoc.updatedAt
         )
     );
   }
 
-  async create(params: IUserInput): Promise<User> {
+  async create(params: CreateUserInput): Promise<User> {
     const userDoc = await UserModel.create(params);
 
     return new User(
       userDoc.id,
       userDoc.email,
       userDoc.password,
+      userDoc.active,
       userDoc.createdAt,
       userDoc.updatedAt
     );
