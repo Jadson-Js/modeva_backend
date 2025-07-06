@@ -1,8 +1,5 @@
 import mongoose from 'mongoose';
-import {
-  mongoDbUri,
-  mongoDbName,
-} from '../../../shared/config/database.config';
+import { mongoDbUri, mongoDbName } from '../../../shared/config/environment';
 
 async function connectToDatabase() {
   try {

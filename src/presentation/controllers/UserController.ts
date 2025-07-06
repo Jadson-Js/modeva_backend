@@ -1,16 +1,16 @@
 import { Request, Response } from 'express';
-import { findAllUsersUseCase, createUserUseCase } from '../factories/user';
-import { UserMapper } from '../mappers/UserMapper';
+import { findAllUsersUseCase, createUserUseCase } from '../container/user';
 import { ApiResponse } from '../dtos/IApiResponse';
+import { CreateUserOutput } from '../dtos/user/CreateUserDTO';
+import { UserMapper } from '../mapper/UserMapper';
 
 export class UserController {
   static async findAll(req: Request, res: Response): Promise<Response> {
     const users = await findAllUsersUseCase.execute();
-    const usersDTO = users.map((user) => UserMapper.toDTO(user));
-    const response: ApiResponse<typeof usersDTO> = {
+    const response: ApiResponse<CreateUserOutput[]> = {
       success: true,
       message: 'Users found',
-      data: usersDTO,
+      data: users.map((user) => UserMapper.toCreateUserOutput(user)),
     };
 
     return res.status(200).json(response);
@@ -21,7 +21,7 @@ export class UserController {
     const data = { email, password };
 
     const user = await createUserUseCase.execute(data);
-    const userDTO = UserMapper.toDTO(user);
+    const userDTO = UserMapper.toCreateUserOutput(user);
     const response: ApiResponse<typeof userDTO> = {
       success: true,
       message: 'User created',
