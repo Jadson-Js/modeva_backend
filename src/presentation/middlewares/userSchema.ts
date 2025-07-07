@@ -6,3 +6,9 @@ export const createUserSchema = z.object({
     password: z.string().min(6),
   }),
 });
+
+export const findUserByEmailSchema = z.object({
+  params: z.object({
+    email: z.string().email(),
+  }),
+});

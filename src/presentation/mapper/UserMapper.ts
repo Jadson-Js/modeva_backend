@@ -1,8 +1,8 @@
 import { User } from '../../domain/entities/User';
-import { CreateUserOutput } from '../dtos/user/CreateUserDTO';
+import { UserDTO } from '../dtos/user/UserDTO';
 
 export class UserMapper {
-  static toCreateUserOutput(user: User): CreateUserOutput {
+  static toDTO(user: User): UserDTO {
     return {
       id: user.id,
       email: user.email,
