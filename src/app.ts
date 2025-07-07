@@ -13,7 +13,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api', setupRouter);
-
 app.use(errorHandler);
 
 export { app };

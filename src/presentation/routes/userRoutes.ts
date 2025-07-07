@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { UserController } from '../controllers/UserController';
-import { asyncHandler } from '../../shared/utils/asyncHandler';
+import { asyncHandler } from '../middlewares/asyncHandler';
 import { authMiddleware } from '../middlewares/authMiddleware';
 import { validate } from '../middlewares/validate';
 import { createUserSchema } from '../middlewares/userSchema';

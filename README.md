@@ -9,10 +9,8 @@ projeto-api/
 │ │ │ ├── IUserRepository.ts (COMPLETE)
 │ │ ├── services/
 │ │ │ ├── IEmailService.ts
-│ │ │ ├── ICacheService.ts
 │ │ └── errors/ (COMPLETE)
 │ │ ├── AppError.ts (COMPLETE)
-│ │ ├── ValidationError.ts
 │ │ └── NotFoundError.ts (COMPLETE)
 │ ├── application/ (COMPLETE)
 │ │ ├── useCases/ (COMPLETE)
@@ -28,71 +26,39 @@ projeto-api/
 │ │ │ ├── CreateUserDTO.ts (COMPLETE)
 │ │ │ ├── UpdateUserDTO.ts
 │ │ │ ├── LoginDTO.ts
-│ │ │ └── ApiResponseDTO.ts
-│ │ └── validators/
-│ │ ├── UserValidator.ts
-│ │ ├── AuthValidator.ts
-│ │ └── CommonValidator.ts
+│ │ │ └── ApiResponseDTO.ts (COMPLETE)
 │ ├── infrastructure/ (COMPLETE)
 │ │ ├── database/ (COMPLETE)
 │ │ │ ├── mongoose/ (COMPLETE)
 │ │ │ │ ├── connection.ts (COMPLETE)
 │ │ │ │ ├── models/ (COMPLETE)
 │ │ │ │ │ ├── UserModel.ts (COMPLETE)
-│ │ │ │ │ └── TokenModel.ts
 │ │ │ │ └── repositories/ (COMPLETE)
 │ │ │ │ ├── UserRepository.ts (COMPLETE)
-│ │ │ └── redis/
-│ │ │ ├── connection.ts
-│ │ │ └── CacheService.ts
+│ │ │ ├── connection.ts (COMPLETE)
 │ │ ├── services/
 │ │ │ ├── EmailService.ts
 │ │ │ ├── JWTService.ts
 │ │ │ ├── HashService.ts
-│ │ │ └── StorageService.ts
 │ │ └── external/
 │ │ ├── sendgrid/
 │ │ │ └── SendGridEmailProvider.ts
-│ │ └── aws/
-│ │ └── S3StorageProvider.ts
 │ ├── presentation/ (COMPLETE)
 │ │ ├── controllers/ (COMPLETE)
 │ │ │ ├── UserController.ts (COMPLETE)
 │ │ │ ├── AuthController.ts
 │ │ ├── middlewares/ (COMPLETE)
 │ │ │ ├── auth.middleware.ts (COMPLETE)
-│ │ │ ├── validation.middleware.ts
+│ │ │ ├── validation.middleware.ts (COMPLETE)
 │ │ │ ├── error.middleware.ts (COMPLETE)
-│ │ │ ├── rateLimit.middleware.ts  
-│ │ │ └── cors.middleware.ts
 │ │ ├── routes/ (COMPLETE)
-│ │ │ ├── v1/
-│ │ │ │ ├── userRoutes.ts (COMPLETE)
-│ │ │ │ ├── authRoutes.ts
-│ │ │ │ └── index.ts
+│ │ │ ├── userRoutes.ts (COMPLETE)
+│ │ │ ├── authRoutes.ts
 │ │ │ └── index.ts (COMPLETE)
-│ │ └── swagger/
-│ │ ├── swagger.config.ts
-│ │ └── schemas/
-│ │ ├── User.schema.ts
-│ │ └── Auth.schema.ts
 │ ├── shared/ (COMPLETE)
 │ │ ├── config/ (COMPLETE)
-│ │ │ ├── env.config.ts
-│ │ │ ├── database.config.ts (COMPLETE)
-│ │ │ ├── cache.config.ts
-│ │ │ └── app.config.ts
-│ │ ├── constants/
-│ │ │ ├── httpStatus.ts
-│ │ │ ├── errorMessages.ts
 │ │ ├── utils/ (COMPLETE)
-│ │ │ ├── logger.ts
 │ │ │ ├── asyncHandler.ts (COMPLETE)
-│ │ │ ├── dateUtils.ts
-│ │ │ └── responseUtils.ts
-│ │ ├── types/
-│ │ │ ├── auth.types.ts
-│ │ │ └── api.types.ts
 │ │ └── container/ (COMPLETE)
 │ │ └── dependencyInjection.ts (COMPLETE)
 │ ├── app.ts (COMPLETE)
@@ -131,20 +97,6 @@ projeto-api/
 │ └── setup/
 │ ├── setupTests.ts
 │ └── testDatabase.ts
-├── docs/
-│ ├── api/
-│ │ ├── swagger.json
-│ │ └── postman_collection.json
-│ ├── architecture/
-│ │ ├── clean-architecture.md
-│ │ └── database-design.md
-│ └── deployment/
-│ └── environment-variables.md
-├── environments/
-│ ├── .env.example
-│ ├── .env.development
-│ ├── .env.staging
-│ └── .env.production
 ├── .gitignore
 ├── .eslintrc.js
 ├── .prettierrc
