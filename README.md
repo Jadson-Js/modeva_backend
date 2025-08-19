@@ -7,8 +7,6 @@ projeto-api/
 │ │ │ ├── User.ts (COMPLETE)
 │ │ ├── repositories/ (COMPLETE)
 │ │ │ ├── IUserRepository.ts (COMPLETE)
-│ │ ├── services/
-│ │ │ ├── IEmailService.ts
 │ │ └── errors/ (COMPLETE)
 │ │ ├── AppError.ts (COMPLETE)
 │ │ └── NotFoundError.ts (COMPLETE)
@@ -24,7 +22,6 @@ projeto-api/
 │ │ │ ├── RegisterUseCase.ts
 │ │ ├── dtos/ (COMPLETE)
 │ │ │ ├── CreateUserDTO.ts (COMPLETE)
-│ │ │ ├── UpdateUserDTO.ts
 │ │ │ ├── LoginDTO.ts
 │ │ │ └── ApiResponseDTO.ts (COMPLETE)
 │ ├── infrastructure/ (COMPLETE)
@@ -37,12 +34,9 @@ projeto-api/
 │ │ │ │ ├── UserRepository.ts (COMPLETE)
 │ │ │ ├── connection.ts (COMPLETE)
 │ │ ├── services/
-│ │ │ ├── EmailService.ts
 │ │ │ ├── JWTService.ts
 │ │ │ ├── HashService.ts
 │ │ └── external/
-│ │ ├── sendgrid/
-│ │ │ └── SendGridEmailProvider.ts
 │ ├── presentation/ (COMPLETE)
 │ │ ├── controllers/ (COMPLETE)
 │ │ │ ├── UserController.ts (COMPLETE)
