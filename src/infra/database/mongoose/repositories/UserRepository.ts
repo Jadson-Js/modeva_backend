@@ -13,8 +13,6 @@ export class UserRepository implements IUserRepository {
   async findById(id: string): Promise<User | null> {
     const userDoc = await UserModel.findOne({ _id: id });
 
-    console.log(id);
-
     if (!userDoc) {
       return null;
     }
