@@ -18,7 +18,7 @@ export class JWTService {
     });
   }
 
-  static verifyToken(token: string): IJWTPayload {
+  static decodedToken(token: string): IJWTPayload {
     const decoded = jwt.verify(token, JWTSecretKey) as IJWTPayload;
 
     return decoded;
