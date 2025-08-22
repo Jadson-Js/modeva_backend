@@ -4,6 +4,6 @@ export interface SignupInput {
 }
 
 export interface SignupOutput {
+  id: string;
   email: string;
-  token: string;
 }
